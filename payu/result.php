@@ -11,6 +11,9 @@ $option  = array( 	'merchant' => $payu->Payu_getVar("merchant"),
 
 $payansewer = PayuCLS::getInst()->setOptions( $option )->IPN();
 echo $payansewer;
+flush();
+ob_flush();
+
 
 $ord = explode( "_", $_POST["REFNOEXT"]);
 $extraVars = "";
