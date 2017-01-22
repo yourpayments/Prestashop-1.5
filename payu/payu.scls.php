@@ -7,7 +7,8 @@ if ( $_GET['payudebugmode'] == 'true' )
 
 class PayuCLS
 {
-	var $luUrl = "https://secure.payu.ru/order/lu.php", 
+	// var $luUrl = "https://secure.payu.ua/order/lu.php", 
+	var $luUrl = "https://secure.payu.ru/order/lu.php",
 		$button = "<input type='submit'>",
 		$debug = 0,
 		$showinputs = "hidden";
@@ -78,6 +79,11 @@ class PayuCLS
 	{		
 		$str = "";
 		foreach ( $data as $k => $v ) $str .= $this->convData( $v );
+
+		if ($this->debug) {
+			$str .= '4TRUE';
+		}
+
 		return $this->md5_hmac( $str );
 	}
 
@@ -171,7 +177,10 @@ class PayuCLS
 		unset( $arr["HASH"] );
 		$sign = $this->Signature( $arr );
 
-		if ( $hash != $sign ) return $this;
+		if ( $hash != $sign ) {
+			return false;
+		}
+		
 		$datetime = date("YmdHis");
 		$sign = $this->Signature(  array(
 				   						"IPN_PID" => $arr[ "IPN_PID" ][0], 

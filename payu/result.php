@@ -5,15 +5,18 @@ include(dirname(__FILE__).'/payu.scls.php');
 
 $payu = new payu();
 
-$option  = array( 	'merchant' => $payu->Payu_getVar("merchant"), 
-					'secretkey' => $payu->Payu_getVar("secret_key"), 
-					'debug' => $payu->Payu_getVar("debug_mode") );
+$option  = array(
+	'merchant'  => $payu->Payu_getVar("merchant"), 
+	'secretkey' => $payu->Payu_getVar("secret_key"), 
+	// 'debug'     => $payu->Payu_getVar("debug_mode")
+);
 
 $payansewer = PayuCLS::getInst()->setOptions( $option )->IPN();
-echo $payansewer;
-flush();
-ob_flush();
+if (!$payansewer) {
+	die('Incorrect hash');
+}
 
+echo $payansewer;
 
 $ord = explode( "_", $_POST["REFNOEXT"]);
 $extraVars = "";

@@ -1,0 +1,458 @@
+Array
+(
+    [cookie] => Cookie Object
+        (
+            [_content:protected] => Array
+                (
+                    [date_add] => 2017-01-18 16:00:21
+                    [id_lang] => 1
+                    [id_currency] => 1
+                    [id_guest] => 2974
+                    [id_connections] => 3798
+                    [last_visited_category] => 192
+                    [viewed] => 445
+                    [id_customer] => 91
+                    [customer_lastname] => .
+                    [customer_firstname] => TEST
+                    [logged] => 1
+                    [is_guest] => 1
+                    [passwd] => df6db6e067806cd05db379cd826e8515
+                    [email] => 184307@auto-generated.opc
+                    [check_cgv] => 
+                    [id_cart] => 154
+                    [checksum] => 2108980470
+                )
+
+            [_name:protected] => 50611aebd1c5abb315ba70ce0ff2bb16
+            [_expire:protected] => 1488210187
+            [_domain:protected] => pogremyshki.ru
+            [_path:protected] => /
+            [_cipherTool:protected] => Rijndael Object
+                (
+                    [_key:protected] => YiZNPuxRTNUKga3jU6d45regaqTqcDdD
+                    [_iv:protected] => �P�{�x&�0V#�/
+                )
+
+            [_modified:protected] => 
+            [_allow_writing:protected] => 1
+            [_salt:protected] => zefJSwBB
+            [_standalone:protected] => 
+        )
+
+    [cart] => Cart Object
+        (
+            [id] => 154
+            [id_shop_group] => 1
+            [id_shop] => 1
+            [id_address_delivery] => 80
+            [id_address_invoice] => 80
+            [id_currency] => 1
+            [id_customer] => 91
+            [id_guest] => 2974
+            [id_lang] => 1
+            [recyclable] => 0
+            [gift] => 0
+            [gift_message] => 
+            [mobile_theme] => 0
+            [date_add] => 2017-01-18 18:42:21
+            [secure_key] => 2150e4ccda7deb2bf338b0ef55e71751
+            [id_carrier] => 13
+            [date_upd] => 2017-01-18 18:43:07
+            [checkedTos] => 
+            [pictures] => 
+            [textFields] => 
+            [delivery_option] => a:1:{i:80;s:3:"13,";}
+            [allow_seperated_package] => 0
+            [_products:protected] => Array
+                (
+                    [0] => Array
+                        (
+                            [id_product_attribute] => 0
+                            [id_product] => 445
+                            [cart_quantity] => 1
+                            [id_shop] => 1
+                            [name] => Постельное белье в коляску Игра желтое Dream a Dream
+                            [is_virtual] => 0
+                            [description_short] => 
+                            [available_now] => 
+                            [available_later] => 
+                            [id_category_default] => 25
+                            [id_supplier] => 0
+                            [id_manufacturer] => 0
+                            [on_sale] => 0
+                            [ecotax] => 0.000000
+                            [additional_shipping_cost] => 0.00
+                            [available_for_order] => 1
+                            [price] => 799
+                            [active] => 1
+                            [unity] => 
+                            [unit_price_ratio] => 0.000000
+                            [quantity_available] => 996
+                            [width] => 0.000000
+                            [height] => 0.000000
+                            [depth] => 0.000000
+                            [out_of_stock] => 2
+                            [weight] => 0.000000
+                            [date_add] => 2016-09-06 21:36:09
+                            [date_upd] => 2017-01-15 20:26:54
+                            [quantity] => 1
+                            [link_rewrite] => postelnoe-bele-v-kolyasku-igra-zheltoe-dream-a-dream
+                            [category] => aksessuary-k-kolyaskam
+                            [unique_id] => 0000000445000000000080
+                            [id_address_delivery] => 80
+                            [wholesale_price] => 645.000000
+                            [advanced_stock_management] => 0
+                            [supplier_reference] => 
+                            [customization_quantity] => 
+                            [id_customization] => 
+                            [price_attribute] => 
+                            [ecotax_attr] => 
+                            [reference] => ДД054
+                            [weight_attribute] => 
+                            [ean13] => 
+                            [upc] => 
+                            [pai_id_image] => 
+                            [pai_legend] => 
+                            [minimal_quantity] => 1
+                            [stock_quantity] => 996
+                            [price_wt] => 799
+                            [total_wt] => 799
+                            [total] => 799
+                            [id_image] => 445-2708
+                            [legend] => 
+                            [reduction_applies] => 
+                            [quantity_discount_applies] => 
+                            [allow_oosp] => 1
+                            [features] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [id_feature] => 9
+                                            [id_product] => 445
+                                            [id_feature_value] => 91
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [id_feature] => 10
+                                            [id_product] => 445
+                                            [id_feature_value] => 92
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [id_feature] => 11
+                                            [id_product] => 445
+                                            [id_feature_value] => 89
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [id_feature] => 12
+                                            [id_product] => 445
+                                            [id_feature_value] => 95
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [id_feature] => 13
+                                            [id_product] => 445
+                                            [id_feature_value] => 290
+                                        )
+
+                                    [5] => Array
+                                        (
+                                            [id_feature] => 15
+                                            [id_product] => 445
+                                            [id_feature_value] => 102
+                                        )
+
+                                    [6] => Array
+                                        (
+                                            [id_feature] => 16
+                                            [id_product] => 445
+                                            [id_feature_value] => 97
+                                        )
+
+                                    [7] => Array
+                                        (
+                                            [id_feature] => 17
+                                            [id_product] => 445
+                                            [id_feature_value] => 291
+                                        )
+
+                                    [8] => Array
+                                        (
+                                            [id_feature] => 19
+                                            [id_product] => 445
+                                            [id_feature_value] => 100
+                                        )
+
+                                    [9] => Array
+                                        (
+                                            [id_feature] => 20
+                                            [id_product] => 445
+                                            [id_feature_value] => 101
+                                        )
+
+                                )
+
+                            [rate] => 0
+                            [tax_name] => 
+                        )
+
+                )
+
+            [_taxCalculationMethod:protected] => 0
+            [webserviceParameters:protected] => Array
+                (
+                    [fields] => Array
+                        (
+                            [id_address_delivery] => Array
+                                (
+                                    [xlink_resource] => addresses
+                                )
+
+                            [id_address_invoice] => Array
+                                (
+                                    [xlink_resource] => addresses
+                                )
+
+                            [id_currency] => Array
+                                (
+                                    [xlink_resource] => currencies
+                                )
+
+                            [id_customer] => Array
+                                (
+                                    [xlink_resource] => customers
+                                )
+
+                            [id_guest] => Array
+                                (
+                                    [xlink_resource] => guests
+                                )
+
+                            [id_lang] => Array
+                                (
+                                    [xlink_resource] => languages
+                                )
+
+                        )
+
+                    [associations] => Array
+                        (
+                            [cart_rows] => Array
+                                (
+                                    [resource] => cart_row
+                                    [virtual_entity] => 1
+                                    [fields] => Array
+                                        (
+                                            [id_product] => Array
+                                                (
+                                                    [required] => 1
+                                                    [xlink_resource] => products
+                                                )
+
+                                            [id_product_attribute] => Array
+                                                (
+                                                    [required] => 1
+                                                    [xlink_resource] => combinations
+                                                )
+
+                                            [id_address_delivery] => Array
+                                                (
+                                                    [required] => 1
+                                                    [xlink_resource] => addresses
+                                                )
+
+                                            [quantity] => Array
+                                                (
+                                                    [required] => 1
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [id_shop_list] => 
+            [get_shop_from_context:protected] => 1
+            [table:protected] => cart
+            [identifier:protected] => id_cart
+            [fieldsRequired:protected] => Array
+                (
+                    [0] => id_currency
+                    [1] => id_lang
+                )
+
+            [fieldsSize:protected] => Array
+                (
+                    [secure_key] => 32
+                )
+
+            [fieldsValidate:protected] => Array
+                (
+                    [id_shop_group] => isUnsignedId
+                    [id_shop] => isUnsignedId
+                    [id_address_delivery] => isUnsignedId
+                    [id_address_invoice] => isUnsignedId
+                    [id_carrier] => isUnsignedId
+                    [id_currency] => isUnsignedId
+                    [id_customer] => isUnsignedId
+                    [id_guest] => isUnsignedId
+                    [id_lang] => isUnsignedId
+                    [recyclable] => isBool
+                    [gift] => isBool
+                    [gift_message] => isMessage
+                    [mobile_theme] => isBool
+                    [allow_seperated_package] => isBool
+                    [date_add] => isDateFormat
+                    [date_upd] => isDateFormat
+                )
+
+            [fieldsRequiredLang:protected] => Array
+                (
+                )
+
+            [fieldsSizeLang:protected] => Array
+                (
+                )
+
+            [fieldsValidateLang:protected] => Array
+                (
+                )
+
+            [tables:protected] => Array
+                (
+                )
+
+            [image_dir:protected] => 
+            [image_format:protected] => jpg
+            [def:protected] => Array
+                (
+                    [table] => cart
+                    [primary] => id_cart
+                    [fields] => Array
+                        (
+                            [id_shop_group] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_shop] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_address_delivery] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_address_invoice] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_carrier] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_currency] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                    [required] => 1
+                                )
+
+                            [id_customer] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_guest] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                )
+
+                            [id_lang] => Array
+                                (
+                                    [type] => 1
+                                    [validate] => isUnsignedId
+                                    [required] => 1
+                                )
+
+                            [recyclable] => Array
+                                (
+                                    [type] => 2
+                                    [validate] => isBool
+                                )
+
+                            [gift] => Array
+                                (
+                                    [type] => 2
+                                    [validate] => isBool
+                                )
+
+                            [gift_message] => Array
+                                (
+                                    [type] => 3
+                                    [validate] => isMessage
+                                )
+
+                            [mobile_theme] => Array
+                                (
+                                    [type] => 2
+                                    [validate] => isBool
+                                )
+
+                            [delivery_option] => Array
+                                (
+                                    [type] => 3
+                                )
+
+                            [secure_key] => Array
+                                (
+                                    [type] => 3
+                                    [size] => 32
+                                )
+
+                            [allow_seperated_package] => Array
+                                (
+                                    [type] => 2
+                                    [validate] => isBool
+                                )
+
+                            [date_add] => Array
+                                (
+                                    [type] => 5
+                                    [validate] => isDateFormat
+                                )
+
+                            [date_upd] => Array
+                                (
+                                    [type] => 5
+                                    [validate] => isDateFormat
+                                )
+
+                        )
+
+                    [classname] => Cart
+                )
+
+            [update_fields:protected] => 
+        )
+
+)

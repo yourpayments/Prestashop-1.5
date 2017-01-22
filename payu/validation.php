@@ -5,6 +5,8 @@ include(dirname(__FILE__).'/payu.php');
 include(dirname(__FILE__).'/payu.scls.php');
 
 $payu = new payu();
+$cart               = $cart->id ? $cart : new Cart($_GET['id_cart']);
+$payu->currentOrder = $payu->currentOrder ?: Order::getOrderByCartId($cart->id);
 
 if ($currency->iso_code != $payu->Payu_getVar("currency") OR $cart->id_customer == 0 OR $cart->id_address_delivery == 0 OR $cart->id_address_invoice == 0 OR !$payu->active)
 	Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
@@ -37,7 +39,6 @@ $button = "<div style='position:absolute; top:50%; left:50%; margin:-40px 0px 0p
 		  	function subform(){ document.getElementById('PayUForm').submit(); }
 		  </script>";
 
-
 $option  = array( 	'merchant' => $payu->Payu_getVar("merchant"), 
 					'secretkey' => $payu->Payu_getVar("secret_key"), 
 					'debug' => $payu->Payu_getVar("debug_mode"),
@@ -56,31 +57,33 @@ foreach ( $cart->getProducts() as $item )
 	$forSend['ORDER_PCODE'][] = $item['id_product'];
 	$forSend['ORDER_PINFO'][] = $item['description_short'];
 	$forSend['ORDER_PRICE'][] = $price;
-	$forSend['ORDER_QTY'][] = $item['quantity'];
-	$forSend['ORDER_VAT'][] = ($item['rate'] != '') ? $item['rate'] : 0;
+	$forSend['ORDER_QTY'][]   = $item['quantity'];
+	$forSend['ORDER_VAT'][]   = ($item['rate'] != '') ? $item['rate'] : 0;
 	
 }
 
 if ( $payu->Payu_getVar("back_ref") != '' ) $forSend['BACK_REF'] = $payu->Payu_getVar("back_ref");
 
 $delivery =  new Address( $cart->id_address_delivery );
-$user = $delivery->getFields();
+$user     = $delivery->getFields();
 $forSend += array(
-					'BILL_FNAME' => $user['firstname'],
-					'BILL_LNAME' => $user['lastname'],
-					'BILL_ADDRESS' => $user['address1'],
-					'BILL_ADDRESS2' => $user['address2'],
-					'BILL_ZIPCODE' => $user['postcode'],
-					'BILL_CITY' => $user['city'],
-					'BILL_PHONE' => $user['phone_mobile'],
-					'BILL_EMAIL' =>$customer->email
-					);
+	'BILL_FNAME'    => $customer->firstname ?: $user['firstname'],
+	'BILL_LNAME'    => $customer->lastname  ?: $user['lastname'],
+	'BILL_ADDRESS'  => $user['address1'],
+	'BILL_ADDRESS2' => $user['address2'],
+	'BILL_ZIPCODE'  => $user['postcode'],
+	'BILL_CITY'     => $user['city'],
+	'BILL_PHONE'    => $user['phone_mobile'],
+	'BILL_EMAIL'    => $customer->email
+);
 
 $mailVars = array();
 
-$payu->validateOrder($cart->id, 1, $total, $payu->displayName, NULL, NULL, (int)$currency->id, false, $customer->secure_key);
-$order = new Order($payu->currentOrder);
+if (!$payu->currentOrder) {
+	$payu->validateOrder($cart->id, 1, $total, $payu->displayName, NULL, NULL, (int)$currency->id, false, $customer->secure_key);
+}
 
+$order = new Order($payu->currentOrder);
 $orderID = $payu->currentOrder.'_'.$cart->id;
 
 $forSend += array (

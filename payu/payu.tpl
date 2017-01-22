@@ -25,7 +25,7 @@
 *}
 
 <p class="payment_module">
-	<a href="{$this_path_ssl}validation.php" rel='payu' mod='payu'>
+	<a href="{$this_path_ssl}validation.php?id_cart={$this_id_cart}" rel='payu' title="PayU" mod='payu'>
 		<img src="{$this_path}img/payu.jpg" rel='payu' width="90" height="32"/>
 		{$this_description}
 	</a>
