@@ -28,7 +28,8 @@ if (!Validate::isLoadedObject($customer))
 	Tools::redirectLink(__PS_BASE_URI__.'order.php?step=1');
 
 $currency = new Currency($cookie->id_currency);
-$total = (float)$cart->getOrderTotal(true, Cart::BOTH);
+$total    = (float)$cart->getOrderTotal(true, Cart::BOTH);
+$discount = (float) $cart->getOrderTotal(true, Cart::ONLY_DISCOUNTS);
 
 $button = "<div style='position:absolute; top:50%; left:50%; margin:-40px 0px 0px -60px; '>".
 		  "<div><img src='./img/payu.png' width='120px' style='margin:0px 5px;'></div>".
@@ -74,7 +75,9 @@ $forSend += array(
 	'BILL_ZIPCODE'  => $user['postcode'],
 	'BILL_CITY'     => $user['city'],
 	'BILL_PHONE'    => $user['phone_mobile'],
-	'BILL_EMAIL'    => $customer->email
+	'BILL_EMAIL'    => $customer->email,
+
+	'DISCOUNT'      => $discount,
 );
 
 $mailVars = array();
