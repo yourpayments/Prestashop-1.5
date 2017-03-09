@@ -76,9 +76,11 @@ $forSend += array(
 	'BILL_CITY'     => $user['city'],
 	'BILL_PHONE'    => $user['phone_mobile'],
 	'BILL_EMAIL'    => $customer->email,
-
-	'DISCOUNT'      => $discount,
 );
+
+if ($discount) {
+	$forSend['DISCOUNT'] = $discount;
+}
 
 $mailVars = array();
 
