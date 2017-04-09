@@ -18,7 +18,7 @@ class PayuCLS
 	private $data = array(), $dataArr = array(), $answer = ""; 
 	private $LUcell = array( 'MERCHANT' => 1, 'ORDER_REF' => 0, 'ORDER_DATE' => 1, 'ORDER_PNAME' => 1, 'ORDER_PGROUP' => 0,
 							'ORDER_PCODE' => 1, 'ORDER_PINFO' => 0, 'ORDER_PRICE' => 1, 'ORDER_QTY' => 1, 'ORDER_VAT' => 1, 
-							'ORDER_SHIPPING' => 1, 'PRICES_CURRENCY' => 1);
+							'ORDER_SHIPPING' => 1, 'PRICES_CURRENCY' => 1, 'DISCOUNT' => 0);
 
 	private $IPNcell = array( "IPN_PID", "IPN_PNAME", "IPN_DATE", "ORDERSTATUS" );
 
