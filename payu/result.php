@@ -16,8 +16,6 @@ if (!$payansewer) {
 	die('Incorrect hash');
 }
 
-echo $payansewer;
-
 $ord = explode( "_", $_POST["REFNOEXT"]);
 $extraVars = "";
 $order = new Order(intval($ord[0]));
@@ -34,3 +32,5 @@ $history = new OrderHistory();
 $history->id_order = intval($order->id);
 $history->changeIdOrderState(intval($id_order_state), intval($order->id));
 $history->addWithemail(true, $extraVars);
+
+echo $payansewer;
